@@ -1,0 +1,44 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Tileset.tres" type="TileSet" id=1]
+[ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Goal.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/LevelUI.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/WorldEnvironment.tscn" type="PackedScene" id=5]
+
+[node name="Level2" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="." index="0"]
+
+mode = 0
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 32, 32 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( 0, 0, 0, 1, 0, 0, 4, 0, 0, 5, 0, 0, 6, 0, 0, 7, 0, 0, 8, 0, 0, 65543, 0, 0, 131077, 0, 0, 131081, 0, 0, 131082, 0, 0, 262150, 0, 0, 524298, 0, 0, 524299, 0, 0, 524300, 0, 0, 589834, 0, 0, 589835, 0, 0, 589836, 0, 0, 655370, 0, 0, 655371, 0, 0, 655372, 0, 0, 720896, 0, 0, 786441, 0, 0, 851973, 0, 0, 851975, 0, 0, 917504, 0, 0, 917505, 0, 0, 917506, 0, 0, 917509, 0, 0, 917511, 0, 0, 983040, 0, 0, 983041, 0, 0, 983042, 0, 0, 1048576, 0, 0, 1048577, 0, 0, 1048578, 0, 0, 1114123, 0, 0, 1114124, 0, 0, 1114125, 0, 0, 1179659, 0, 0, 1179660, 0, 0, 1179661, 0, 0, 1245195, 0, 0, 1245196, 0, 0, 1245197, 0, 0, 1310725, 0, 0, 1310726, 0, 0, 1310727, 0, 0, 1376261, 0, 0, 1376262, 0, 0, 1376263, 0, 0, 1441797, 0, 0, 1441798, 0, 0, 1441799, 0, 0 )
+_sections_unfolded = [ "Cell" ]
+
+[node name="Player" parent="." index="1" instance=ExtResource( 2 )]
+
+position = Vector2( 208, 176 )
+
+[node name="Goal" parent="." index="2" instance=ExtResource( 3 )]
+
+position = Vector2( 208, 112 )
+
+[node name="LevelUI" parent="." index="3" instance=ExtResource( 4 )]
+
+[node name="WorldEnvironment" parent="." index="4" instance=ExtResource( 5 )]
+
+
