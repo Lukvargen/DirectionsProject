@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Directions.png-2cc5c39da5c61f1aa61dab93f850c8b0.stex"
+path="res://.import/Directions.png-e428ef01cf0b21e812bd8a6c4bf80344.stex"
 
 [deps]
 
-source_file="res://Html Export/Directions.png"
-dest_files=[ "res://.import/Directions.png-2cc5c39da5c61f1aa61dab93f850c8b0.stex" ]
+source_file="res://Html Export first/Directions.png"
+dest_files=[ "res://.import/Directions.png-e428ef01cf0b21e812bd8a6c4bf80344.stex" ]
 
 [params]
 

@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Restart.png-ca2056dbead86682373da9ead7556228.stex"
+path="res://.import/level13screenshot.png-af207aae795836ec317fe694add7d54f.stex"
 
 [deps]
 
-source_file="res://Sprites/Restart.png"
-dest_files=[ "res://.import/Restart.png-ca2056dbead86682373da9ead7556228.stex" ]
+source_file="res://Sprites/Scenes/level13screenshot.png"
+dest_files=[ "res://.import/level13screenshot.png-af207aae795836ec317fe694add7d54f.stex" ]
 
 [params]
 
@@ -16,7 +16,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

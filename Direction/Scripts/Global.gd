@@ -175,6 +175,36 @@ var levels = {
 		moves_needed = {
 			1: 8,
 			2: 6,
+			3: 4,
+		},
+		stars = 0,
+	},
+	level12 = {
+		scene = preload("res://Scenes/Playable/Level12.tscn"),
+		icon = preload("res://Sprites/Scenes/level12screenshot.png"),
+		completed = false,
+		highscore = {
+			moves = 0,
+			time = 0,
+		},
+		moves_needed = {
+			1: 9,
+			2: 8,
+			3: 6,
+		},
+		stars = 0,
+	},
+	level13 = {
+		scene = preload("res://Scenes/Playable/Level13.tscn"),
+		icon = preload("res://Sprites/Scenes/level13screenshot.png"),
+		completed = false,
+		highscore = {
+			moves = 0,
+			time = 0,
+		},
+		moves_needed = {
+			1: 7,
+			2: 6,
 			3: 5,
 		},
 		stars = 0,
@@ -193,7 +223,7 @@ func _unhandled_input(event):
 		swipe_start = get_global_mouse_position()
 	elif event.is_action_pressed("restart"):
 		reload_scene()
-	elif event.is_action_pressed("space"):
+	elif event.is_action_pressed("screenshot"):
 		screen_shot()
 	elif event.is_action_pressed("next_level"):
 		print("next_lvl")
@@ -233,7 +263,7 @@ func screen_shot():
 	# get screen capture
 	#var capture = get_viewport().get_screen_capture()
 	# save to a file
-	img.save_png("C://Users//lukas//OneDrive//Dokument//Godot//Direction//Sprites//Scenes//" + level_playing + "screenshot.png")
+	img.save_png("C://Users//lukas//OneDrive//Dokument//Godot//Direction//Sprites//Scenes//Menuscreenshot.png")
 	print("Screenshot")
 
 
@@ -247,6 +277,8 @@ func win(moves, time):
 	else:
 		if moves < level.highscore.moves:
 			level.highscore.moves = moves
+			level.highscore.time = time
+		elif moves == level.highscore.moves:
 			level.highscore.time = time
 	
 	var reached_star = 0
@@ -297,7 +329,6 @@ func goto_level(level):
 func save_game():
 	var save_file = File.new()
 	
-	#var save_data = player.get_ref().data
 	# Behövs spara: Levelid {highscore, stars, completed}
 	
 	var save_data = {}
@@ -333,7 +364,6 @@ func load_game():
 	var currentline = {}
 	save_file.open(SAVE_PATH, File.READ)
 	currentline = parse_json(save_file.get_line())
-	print("current line " , currentline)
 	
 	level_playing = currentline.level_playing
 	if currentline.has("stars"):

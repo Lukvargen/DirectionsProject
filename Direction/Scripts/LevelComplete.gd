@@ -8,6 +8,13 @@ func _ready():
 	pass
 
 func level_completed(stars):
+	var level = Global.levels[Global.level_playing]
+	var level_nr = Global.level_playing.split("level",false)[0]
+	$VBoxContainer/LevelLbl.text = "Level: " + str(level_nr) + " Completed!"
+	
+	$VBoxContainer/HighscoreContainer/VBoxContainer/MovesHighscore.text = "Moves: " + str(level.highscore.moves)
+	$VBoxContainer/HighscoreContainer/VBoxContainer/TimeHighscore.text = "Time: " + str(level.highscore.time).pad_decimals(2)
+	
 	for star in $VBoxContainer/Stars.get_children():
 		if stars > 0:
 			star.texture = star_full

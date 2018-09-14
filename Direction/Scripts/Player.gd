@@ -59,8 +59,9 @@ func _physics_process(delta):
 			
 	
 	if start_timer:
-		time+=delta
-		emit_signal("time_changed",time)
+		if not destroy:
+			time+=delta
+			emit_signal("time_changed",time)
 
 
 func swipe(dir):
@@ -95,6 +96,7 @@ func win():
 	new_win_particle.global_position = global_position
 	Global.win(moves, time)
 	destroy = true
+	emit_signal("time_changed",time)
 	queue_free()
 	pass
 

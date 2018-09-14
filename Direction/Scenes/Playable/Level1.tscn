@@ -1,10 +1,9 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Tileset.tres" type="TileSet" id=1]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/LevelUI.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/Goal.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Scenes/WorldEnvironment.tscn" type="PackedScene" id=5]
 
 [node name="Level1" type="Node2D"]
 
@@ -33,14 +32,12 @@ _sections_unfolded = [ "Cell" ]
 
 position = Vector2( 80, 368 )
 collision/safe_margin = 0.001
-_sections_unfolded = [ "Material", "Transform", "collision" ]
+_sections_unfolded = [ "Material", "Transform", "Visibility", "collision" ]
 
 [node name="LevelUI" parent="." index="2" instance=ExtResource( 3 )]
 
 [node name="Goal" parent="." index="3" instance=ExtResource( 4 )]
 
 position = Vector2( 272, 752 )
-
-[node name="WorldEnvironment" parent="." index="4" instance=ExtResource( 5 )]
 
 

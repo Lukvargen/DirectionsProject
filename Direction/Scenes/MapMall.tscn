@@ -1,11 +1,10 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scripts/MapMall.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Goal.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Tileset.tres" type="TileSet" id=3]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Scenes/WorldEnvironment.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Scenes/LevelUI.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/LevelUI.tscn" type="PackedScene" id=5]
 
 [node name="MapMall" type="Node2D"]
 
@@ -41,8 +40,6 @@ _sections_unfolded = [ "Cell" ]
 
 position = Vector2( 16, 16 )
 
-[node name="WorldEnvironment" parent="." index="3" instance=ExtResource( 5 )]
-
-[node name="LevelUI" parent="." index="4" instance=ExtResource( 6 )]
+[node name="LevelUI" parent="." index="3" instance=ExtResource( 5 )]
 
 

@@ -12,6 +12,10 @@ func init(level_id, parent):
 	# Label
 	$VBoxContainer/LevelNameLbl.text = "Level " +  level_id.split("level", false)[0]
 	
+	# Highscore
+	$VBoxContainer/HBoxContainer/MovesHighscoreLbl.text = "Moves: " + str(Global.levels[level_id].highscore.moves)
+	$VBoxContainer/HBoxContainer/TimeHighscoreLbl.text = "Time: " + str(Global.levels[level_id].highscore.time).pad_decimals(2)
+	
 	# Texture
 	$VBoxContainer/PanelContainer/TextureButton.texture_normal = Global.levels[level_id].icon
 	
